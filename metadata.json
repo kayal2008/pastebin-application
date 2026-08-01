@@ -1,0 +1,6 @@
+{
+  "name": "PasteBin",
+  "description": "A modern full-stack PasteBin application for sharing code snippets and text with syntax highlighting, authentication, and stats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
