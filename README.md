@@ -1,57 +1,61 @@
-# PasteBin - Modern Code & Text Sharing Platform
+# PasteBin - Code & Text Sharing Platform
 
-A full-stack, production-ready PasteBin web application engineered with React 19, TypeScript, Express.js, MongoDB with Mongoose, Prism.js syntax highlighting, JWT authentication, and Docker multi-container deployment.
+A full-stack PasteBin platform for creating, sharing, and managing code and text snippets with authentication, privacy controls, syntax highlighting, and Docker-based deployment.
 
 ---
 
 ## 🚀 Key Features
 
-- **JWT Authentication**: User registration, login, protected routes, and Bcrypt password hashing.
-- **Snippet Creation & Editing**: Create and edit code or text pastes with title, description, language selection, visibility, password encryption, and custom expiration timers.
+- **JWT Authentication**: User registration, login, protected routes, and secure password hashing with Bcrypt.
+- **Snippet Creation & Editing**: Create and edit code or text pastes with titles, descriptions, language selection, visibility settings, password protection, and custom expiration timers.
 - **Syntax Highlighting**: Supports TypeScript, JavaScript, Python, Java, C++, C#, Go, Rust, SQL, JSON, YAML, Bash, HTML, CSS, Markdown, PHP, Ruby, and Plain Text.
 - **Privacy Controls**:
-  - `Public`: Searchable in community explore feed.
-  - `Unlisted`: Accessible only via unique direct link or QR code.
-  - `Private`: Restricted strictly to author profile.
-  - `Password Protected`: Password verification required for unlocking.
-- **Interactive Dashboard**: Real-time stats KPI cards, top languages breakdown, view counts, and recent paste activity.
-- **Developer Documentation**: Integrated Swagger OpenAPI 3.0 documentation frame at `/api/docs` and interactive Mermaid architecture diagram.
+  - `Public`: Searchable through the community explore feed.
+  - `Unlisted`: Accessible through a unique direct link or QR code.
+  - `Private`: Restricted to the author.
+  - `Password Protected`: Requires password verification before access.
+- **Interactive Dashboard**: View statistics, popular programming languages, paste view counts, and recent paste activity.
+- **API Documentation**: Integrated Swagger OpenAPI 3.0 documentation available through `/api/docs`.
+- **Architecture Documentation**: Includes an interactive Mermaid architecture diagram.
 
 ---
 
 ## 🛠️ Architecture & Tech Stack
 
-- **Frontend**: React 19 + TypeScript + Vite + Tailwind CSS v4 + Lucide Icons
-- **Backend**: Node.js + Express.js + Mongoose ORM + Zod Validation + Helmet + CORS
-- **Database**: MongoDB (with fallback in-memory database engine for instant sandbox execution)
-- **Authentication**: JSON Web Tokens (JWT) & Bcrypt Password Hashing
-- **DevOps**: Dockerfile, Docker Compose, and Cloud Run production bundling via esbuild CJS bundle
+### Frontend
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide Icons
+
+### Backend
+- Node.js
+- Express.js
+- Mongoose
+- Zod Validation
+- Helmet
+- CORS
+
+### Database
+- MongoDB
+- In-memory database fallback for local/sandbox execution
+
+### Authentication & Security
+- JSON Web Tokens (JWT)
+- Bcrypt password hashing
+
+### DevOps
+- Docker
+- Docker Compose
+- esbuild
 
 ---
 
 ## 🏃 Getting Started Locally
 
-```bash
-# 1. Clone repo & install dependencies
-npm install
-
-# 2. Run dev server (Express API + Vite Middleware on Port 3000)
-npm run dev
-
-# 3. Production build
-npm run build
-
-# 4. Start production container
-npm start
-```
-
----
-
-## 🐳 Docker Deployment
+### 1. Clone the Repository
 
 ```bash
-# Spin up MongoDB and App containers
-docker-compose up --build -d
-```
-
-Access application at `http://localhost:3000` and API docs at `http://localhost:3000/api/docs`.
+git clone https://github.com/kayal2008/pastebin-application.git
+cd pastebin-application
